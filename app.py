@@ -1,7 +1,6 @@
 #Insert necessary libraries
-# from flask import Flask, render_template, request, Markup, redirect
-from flask import Flask, render_template, request, redirect
-from werkzeug.utils import Markup
+from flask import Flask, render_template, request, Markup, redirect
+
 
 import config
 import requests
