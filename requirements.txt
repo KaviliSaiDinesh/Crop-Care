@@ -7,4 +7,5 @@ scikit-learn
 # torchvision==0.9.1+cpu
 requests
 Pillow
+Jinja2
 gunicorn == 20.0.4
