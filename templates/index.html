@@ -1,0 +1,144 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <!-- slider section -->
+    <section class="slider_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ">
+            <div class="detail-box">
+              <h1>
+                Welcome to <br>
+                Crop Care
+              </h1>
+              <p>
+                Crop Care is an Artificial Inteligent based web application that can be used in India. We able to provide most suitable Crops, Fertilizers, and
+                provide details about Diseases in your plants based on your farm data.
+
+              </p>
+              
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <div class="img-box">
+				
+              <img src="{{ url_for('static', filename='images/slider-img.png') }}" alt="img not preview" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/about-img.png') }}" alt="img not preview" />
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                What We Do..
+              </h2>
+            </div>
+            <p>
+              In India there are lots of farms available in different areas, some crops are good in some areas based on their soils but not in other areas. Also there are lots of diseases are reported in Indian farms in whole year. Lack of fertilizers affects to harvest as well. 
+            </p>
+            <p>
+              So, <b>Crop Care</b> is becomes tackle those issues and provide AI and ML based solutions to Indian farmers.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="container py_mobile_45">
+      <div class="heading_container heading_center">
+        <h2> Our Services </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box ">
+            <div class="box_content">
+
+              <div class="detail-box">
+                <h5>
+                  Reccomend most suitable crop to your farm
+                </h5>
+                <p>
+                  We can recomend most suitable crops to your farm based on your farms soil details. With 99% accuracy using our ML models.
+                </p>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href="{{ url_for('crop_recommend') }}">
+                Try Now
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box ">
+            <div class="box_content">
+              
+              <div class="detail-box">
+                <h5>
+                  Give advice for fertilizer based on soil
+                </h5>
+                <p>
+                  We provide fertilizers to your farm based on your favorite crops and soil details. With 99% accuracy using our ML models.
+                </p>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href="{{ url_for('fert_suggestion') }}">
+                Try Now
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box ">
+            <div class="box_content">
+              
+              <div class="detail-box">
+                <h5>
+                  Tell Disease caught by your plant
+                </h5>
+                <p>
+                  We can tell you which is the diesease caught by your plants by analyzing images taken from your plants.
+                </p>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href="{{ url_for('disease_prediction') }}">
+                Try Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+
+
+
+{% endblock %}

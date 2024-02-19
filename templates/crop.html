@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <!-- section -->
+  <script src="{{ url_for('static', filename='js/cities.js') }}"></script>
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/about-img.png') }}" alt="img not preview"/>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Crop Recomendation
+              </h2>
+            </div>
+            <p>
+              We can tell you which crop is suitable to grow in your farm based on our AI models.<br>
+            </p>
+            <p>
+              Please fill values for followings...<br>
+            </p>
+            <form method="POST" action="{{ url_for('crop_prediction') }}">
+              <div>
+			          <table>        
+                  <tr>
+                    <td><label>Phosphorous : </label> </td>
+                    <td><input id = "P" name="P" type="number" required></td>                    
+                  </tr>
+                  <tr>
+                    <td><label>Pottasium : </label></td>
+                    <td><input id="K" name="K"type="number" required></td>
+                  </tr>
+                  <tr>
+                    <td><label>Nitrogen : </label></td>
+                    <td> <input id="N" name="N"type="number" required></td>
+                  </tr>
+                  <tr>
+                    <td><label>PH level : </label></td>
+                    <td><input id="ph" name="ph" type="number" required></td>
+                  </tr>
+                  <tr>
+                    <td><label>Rainfall level(mm) : </label></td>
+                    <td><input id="rl" name="rl" type="number" required></td>
+                  </tr>
+                  <tr>
+                    <td><label>Province : </label></td>
+                    <td>
+                      <select
+                        onchange="print_district('district', this.selectedIndex);"
+                        id="province"
+                        name="province"   
+                        required
+                      >
+
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>District : </label></td>
+                    <td>
+                      <select
+                      id="district"
+                      name="district"   
+                      required
+                      >
+
+                    </select>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            
+              <div class="btn-box">
+                <button type="submit" class="btn-1">
+                  Predict now
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script language="javascript">
+        print_province("province");
+      </script>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  {% endblock %}

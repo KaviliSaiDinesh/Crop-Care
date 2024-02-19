@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-9">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Fertilizer Recomendation
+              </h2>
+            </div>
+            <p>
+              We can tell you which fertilizer is suitable to choosed crop in your farm based on our soil.<br>
+            </p>
+            <p>
+              Please fill values for followings...<br>
+            </p>
+            <form  method="POST" action="{{ url_for('fert_recommend') }}">
+            <div>
+              
+				<table>
+					<tr>
+					<td><label>Pottasium : </td><td></label> <input id="Nitrogen" name="nitrogen" required type="number"></td>
+              </tr>
+              <tr>
+					<td><label>Nitrogen : </td><td></label> <input id="Phosphorous" name="phosphorous" required type="number"></td>
+              </tr>
+              <tr>
+					<td><label>Phosphorous : </td><td></label> <input id="Pottasium" name="pottasium" required type="number"></td>
+              </tr>
+              <tr>
+          <td><label>Sugessted crop : </td><td></label> 
+           <select
+
+              name="cropname"
+              class="form-control"
+              id="crop"
+              placeholder="Select a crop"
+              required
+            >
+              <option selected>Select crop</option>
+              <option>rice</option>
+              <option>maize</option>
+              <option>chickpea</option>
+              <option>kidneybeans</option>
+              <option>pigeonpeas</option>
+              <option>mothbeans</option>
+              <option>mungbean</option>
+              <option>blackgram</option>
+              <option>lentil</option>
+              <option>pomegranate</option>
+              <option>banana</option>
+              <option>mango</option>
+              <option>grapes</option>
+              <option>watermelon</option>
+              <option>muskmelon</option>
+              <option>orange</option>
+              <option>papaya</option>
+              <option>coconut</option>
+              <option>cotton</option>
+              <option>jute</option>
+              <option>coffee</option>
+            </select>
+    
+          </td>
+              </tr>
+
+</table>
+            </div>
+            <div class="btn-box">
+              <button type="submit" class="btn-1">
+                Predict now
+              </button>
+            </div>
+          </form>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/about-img.png') }}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+  {% endblock %}
