@@ -1,7 +1,8 @@
 #Insert necessary libraries
 # from flask import Flask, render_template, request, Markup, redirect
 from flask import Flask, render_template, request, redirect
-from werkzeug import Markup
+from werkzeug.utils import Markup
+
 import config
 import requests
 import numpy as np
