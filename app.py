@@ -1,7 +1,5 @@
 #Insert necessary libraries
 from flask import Flask, render_template, request, Markup, redirect
-
-
 import config
 import requests
 import numpy as np
@@ -262,3 +260,6 @@ def fert_recommend():
 
 
 
+if __name__ == "__main__":
+    app.run(debug=True)
+    print("Starting python flask server for Crop Care")
