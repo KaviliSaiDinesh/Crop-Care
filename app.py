@@ -260,6 +260,6 @@ def fert_recommend():
 
 
 
-if __name__ == "__main__":
-    app.run(debug=False)
-    print("Starting python flask server for Crop Care")
+# if __name__ == "__main__":
+#     app.run(debug=False)
+#     print("Starting python flask server for Crop Care")
