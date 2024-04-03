@@ -2,7 +2,7 @@ var province_arr = new Array("Andhra Pradesh", "Tamil Nadu", "Telangana");
 
 var district = new Array();
 district[0] = " ";
-district[1] = "Anantapur|Chittoor|East Godavari|Guntur|Kadapa|Krishna|Kurnool|Nellore|Prakasam|Srikakulam|Visakhapatnam|Vizianagaram|West Godavari";
+district[1] = "Anantapur|Chittoor|East Godavari|Guntur|Kadapa|Kurnool|Nellore|Prakasam|Srikakulam|Visakhapatnam|Vizianagaram|West Godavari";
 district[2] = "Ariyalur|Chengalpattu|Chennai|Coimbatore|Cuddalore|Dharmapuri|Dindigul|Erode|Kallakurichi|Kanchipuram|Kanyakumari|Karur|Krishnagiri|Madurai|Mayiladuthurai|Nagapattinam|Namakkal|Nilgiris|Perambalur|Pudukkottai|Ramanathapuram|Ranipet|Salem|Sivaganga|Tenkasi|Thanjavur|Theni|Thoothukudi|Tiruchirapalli|Tirunelveli|Tirupathur|Tiruppur|Tiruvallur|Tiruvannamalai|Vellore|Viluppuram|Virudhunagar";
 district[3] = "Adilabad|Bhadradri Kothagudem|Hyderabad|Jagtial|Jangaon|Jayashankar Bhupalpally|Jogulamba Gadwal|Kamareddy|Karimnagar|Khammam|Komaram Bheem|Mahabubabad|Mahabubnagar|Mancherial|Medak|Medchal-Malkajgiri|Nagarkurnool|Nalgonda|Nirmal|Nizamabad|Peddapalli|Rajanna Sircilla|Ranga Reddy|Sangareddy|Siddipet|Suryapet|Vikarabad|Wanaparthy|Warangal(Rural)|Warangal(Urban)|Yadadri Bhuvanagiri";
 

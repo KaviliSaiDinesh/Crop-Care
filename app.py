@@ -128,7 +128,7 @@ app = Flask(__name__)
 
 @ app.route('/')
 def home():
-    title = 'Farmhelper - Home'
+    title = 'Crop Care'
     return render_template('index.html', title=title)
     
 
@@ -137,7 +137,7 @@ def home():
 
 @app.route('/disease-predict', methods=['GET', 'POST'])
 def disease_prediction():
-    title = 'Farmhelper - Disease Detection'
+    title = 'Crop Care - Disease Detection'
 
     if request.method == 'POST':
         #print('post')
@@ -168,7 +168,7 @@ def disease_prediction():
 
 @ app.route('/crop_recommend')
 def crop_recommend():
-    title = 'Farmhelper - Crop Recommendation'
+    title = 'Crop Care - Crop Recommendation'
     return render_template('crop.html', title=title)
 
 
@@ -176,7 +176,7 @@ def crop_recommend():
 #render crop prediction from page
 @ app.route('/crop_prediction',methods=['POST'])
 def crop_prediction():
-    title = 'Farmhelper - Crop Prediction'
+    title = 'Crop Care - Crop Prediction'
 
     if request.method == 'POST':
         #print("method post")
@@ -210,14 +210,14 @@ def crop_prediction():
 
 @ app.route('/fertilizer')
 def fert_suggestion():
-    title = 'Farmhelper - Fertilizer Suggestion'
+    title = 'Crop Care - Fertilizer Suggestion'
     return render_template('fertilizer.html', title=title)
 
 
 
 @ app.route('/fertilizer-suggest', methods=['POST'])
 def fert_recommend():
-    title = 'Farmhelper - Fertilizer Suggestion'
+    title = 'Crop Care - Fertilizer Suggestion'
 
     crop_name = str(request.form['cropname'])
     N = int(request.form['nitrogen'])
