@@ -1,0 +1,4 @@
+ngrok http --domain=lenient-readily-cockatoo.ngrok-free.app 5000
+
+
+python wsgi.py
